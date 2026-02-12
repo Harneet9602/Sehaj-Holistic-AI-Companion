@@ -4,3 +4,4 @@ langchain-groq
 langchain-core
 python-dotenv
 langgraph-checkpoint-sqlite
+streamlit
