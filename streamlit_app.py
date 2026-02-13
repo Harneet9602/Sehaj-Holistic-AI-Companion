@@ -114,6 +114,9 @@ with st.sidebar:
 
     with st.expander("👾 **Pixel** (Games)"):
         st.write("For boredom, trivia, and anxiety distraction. *Playful.*")
+
+    with st.expander("🛡️ **Guardian** (Safety)"):
+        st.write("Crisis intervention and risk assessment. *Stable & Non-judgmental.*")
         
     st.markdown("---")
     if st.button("🗑️ Clear Chat History"):
