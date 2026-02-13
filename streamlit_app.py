@@ -130,28 +130,18 @@ with col1:
 with col2:
     st.markdown("# Sehaj AI")
     st.markdown(f"*{user_name}'s Personal Sanctuary*")
+# STATIC EXAMPLES (Replaced Buttons with Informative Pills)
+st.markdown("### 💡 Try Asking...")
+e1, e2, e3, e4 = st.columns(4)
 
-# QUICK ACTIONS (Generic Examples)
-st.markdown("### ⚡ Quick Actions")
-q1, q2, q3, q4 = st.columns(4)
-
-# Function to handle button clicks
-def quick_action(text):
-    st.session_state.messages.append({"role": "user", "content": text})
-    # Force a rerun to process the message immediately
-    st.rerun()
-
-if q1.button("💪 Gym Plan"):
-    quick_action("I want a glute focused workout plan.")
-    
-if q2.button("🥺 I'm Sad"):
-    quick_action("I feel really heavy and overwhelmed today.")
-    
-if q3.button("📚 Study Help"):
-    quick_action("I need research papers on Deep Learning.")
-    
-if q4.button("🎲 Play Game"):
-    quick_action("I'm bored, let's play Atlas!")
+with e1:
+    st.info("**💪 Fitness**\n\n'Give me a glute-focused gym plan.'")
+with e2:
+    st.info("**🥺 Support**\n\n'I feel overwhelmed and heavy today.'")
+with e3:
+    st.info("**📚 Study**\n\n'Find research papers on Deep Learning.'")
+with e4:
+    st.info("**🎲 Fun**\n\n'I am bored, let's play a game of Atlas!'")
 
 st.markdown("---")
 
