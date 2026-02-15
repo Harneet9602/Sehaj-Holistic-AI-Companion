@@ -44,6 +44,7 @@ def supervisor_node(state: AgentState):
     if next_node not in valid_nodes:
         next_node = "HABIT" # Default to the gentle coach if unsure
         
+    print(f"\n🧠 [SUPERVISOR DECISION] Routing to: {next_node}...")
     return {"next": next_node}
         
 def therapist_node(state: AgentState):
