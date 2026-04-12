@@ -57,14 +57,3 @@ workflow.add_edge("safety", END)
 # 7. Compile with Memory (CRITICAL STEP)
 # This enables the bot to "remember" past turns
 app = workflow.compile(checkpointer=memory)
-
-# from graph import app
-# print(app.get_graph().draw_mermaid())
-# try:
-#     png_data = app.get_graph().draw_mermaid_png()
-#     with open("mental_health_bot_structure.png", "wb") as f:
-#         f.write(png_data)
-#     print("Graph saved as 'mental_health_bot_structure.png'!")
-# except Exception:
-#     print("To save as PNG, you need to install graphviz.")
-#     print("For now, copy the text output above and paste it into https://mermaid.live")

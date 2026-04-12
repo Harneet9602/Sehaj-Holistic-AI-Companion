@@ -2,6 +2,7 @@ import streamlit as st
 from langchain_core.messages import HumanMessage
 from graph import app
 import uuid
+import time
 
 # --- 1. PAGE CONFIGURATION ---
 st.set_page_config(
@@ -164,8 +165,14 @@ if user_input:
                 "user_name": user_name
             }
             
-            # CALL THE BRAIN (LangGraph)
+            # Invoke Graph (START TIMER)
+            start_time = time.time() 
+
             result = app.invoke(input_state, config=config)
+            end_time = time.time() # (END TIMER)
+            
+            latency = end_time - start_time
+            print(f"Latency: {latency:.2f} seconds")
             
             # Get Final Response
             bot_response = result['messages'][-1].content
@@ -176,6 +183,7 @@ if user_input:
             # 3. Display Assistant Response with NEW AVATAR
             with st.chat_message("assistant", avatar=detected_avatar):
                 st.markdown(bot_response)
+                st.caption(f"⏱️ Response Time: {latency:.2f} seconds") # <--- Adds it to the UI!
             
             # Save to history with the specific avatar
             st.session_state.messages.append({
