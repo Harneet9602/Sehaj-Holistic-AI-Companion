@@ -30,7 +30,7 @@
 
 ## 🛠️ Technical Stack
 
-* **LLM:** Llama-3.3-70b (via Groq API)
+* **LLM:** openai/gpt-oss-120b (via Groq API)
 * **Framework:** [LangGraph](https://www.langchain.com/langgraph) (for agentic state management)
 * **Interface:** [Streamlit](https://streamlit.io/)
 * **Memory:** SQLite Checkpointer
