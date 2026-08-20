@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 #Initialize the Model (The Brain)
-llm = ChatGroq(model = 'llama-3.3-70b-versatile',temperature =0)
+llm = ChatGroq(model = 'openai/gpt-oss-120b',temperature =0)
 
 def supervisor_node(state: AgentState):
     system_prompt = """
